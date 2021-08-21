@@ -1,3 +1,7 @@
+var inputdate = document.querySelector("#inputDate");
+var btn = document.querySelector("#btncheck");
+
+
 
 function reverseString(str){
     var charList = str.split(''); 
@@ -182,7 +186,24 @@ function getPreviousPalindromeDate(date){
 var date = {day: 1, month: 1, year: 1999};
 //console.log(checkPalindromeForAllDateFormate(date));
 //console.log(getAllDateFormate(date));
-console.log(getNextPalindromeDate(date));
-console.log(getPreviousPalindromeDate(date))
+//console.log(getNextPalindromeDate(date));
+//console.log(getPreviousPalindromeDate(date))
 //console.log(checkPalindrome("aabbaad"))
 //console.log(getPreviousDate(date));
+
+function clickHandler(){
+    console.log("click",inputdate.value[0])
+    if(checkPalindromeForAllDateFormate(inputdate.value)){
+        console.log("yaayyy")
+    }
+    else{
+        console.log(":(missed")
+        //var val = getNextPalindromeDate(inputdate.value)[0]
+        //getPreviousPalindromeDate(inputdate.value)
+        //console.log(val)
+    }
+
+
+}
+
+btn.addEventListener("click", clickHandler)
