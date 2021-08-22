@@ -194,16 +194,12 @@ function clickHandler() {
       year: Number(listOfDate[0]),
     };
     if (checkPalindromeForAllDateFormate(date)) {
-      output.innerHTML = "yaayyy your birthday is palindrome";
+      output.innerHTML = "🥳🎇✨🎊yaayyy your birthday is palindrome";
     } else {
       console.log(":(missed");
       console.log(showMissedDays(date));
       var [ctr, nextDate] = showMissedDays(date);
-      output.innerText = `The palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days!`;
-
-      //var val = getNextPalindromeDate(inputdate.value)[0]
-      //getPreviousPalindromeDate(inputdate.value)
-      //console.log(val)
+      output.innerText = `The palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days!🎃`;
     }
   }
 }
